@@ -72,6 +72,43 @@ function addMapMarkers(rides) {
     });
   }
 
+
+  // Fonction pour créer le graphique
+function createStatisticsChart(rides) {
+    const chartContainer = document.getElementById("myChart");
+    const ctx = chartContainer.getContext("2d");
+  
+    const rideCountByDuration = {};
+    rides.forEach(ride => {
+      const durationRange = ride.duration >= 4 ? "4+" : `${ride.duration}-${ride.duration + 1}`;
+      rideCountByDuration[durationRange] = (rideCountByDuration[durationRange] || 0) + 1;
+    });
+  
+    const chartData = {
+      labels: Object.keys(rideCountByDuration),
+      datasets: [{
+        label: "Trajet par durée",
+        data: Object.values(rideCountByDuration),
+        backgroundColor: "rgba(255, 99, 132, 0.5)",
+        borderColor: "rgba(255, 99, 132, 1)",
+        borderWidth: 1
+      }]
+    };
+  
+    const chart = new Chart(ctx, {
+      type: "bar",
+      data: chartData,
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  }
+
+
   // execution au chargement de la page
 window.addEventListener('load', () => {
     const script = document.createElement('script');
@@ -84,6 +121,13 @@ window.addEventListener('load', () => {
       });
     };
     document.head.appendChild(script);
+
+    const chartScript = document.createElement('script');
+  chartScript.src = 'https://cdn.jsdelivr.net/npm/chart.js';
+  chartScript.onload = () => {
+    fetchRides().then(rides => createStatisticsChart(rides));
+  };
+  document.head.appendChild(chartScript);
   
     fetchRides().then(rides => populateRideDetails(rides));
   });
