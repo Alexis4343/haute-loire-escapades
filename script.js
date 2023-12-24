@@ -21,7 +21,7 @@ function fetchRides() {
         start_latitude: 45.05,
         start_longitude: 3.88,
         duration: 3,
-        image: "images/ride1.jpg"
+        image: "images/ride2.jpg"
       },
       {
         name: "Autour du mezenc",
@@ -32,7 +32,7 @@ function fetchRides() {
         start_latitude: 45.036418,
         start_longitude: 4.058532,
         duration: 2,
-        image: "images/ride1.jpg"
+        image: "images/ride3.jpg"
       },
     ]);
   }
