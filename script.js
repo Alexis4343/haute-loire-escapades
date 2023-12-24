@@ -108,6 +108,24 @@ function createStatisticsChart(rides) {
     });
   }
 
+//fonction filtre
+  const durationFilter = document.getElementById("duration-filter");
+
+durationFilter.addEventListener("change", function () {
+  const selectedDuration = this.value;
+  fetchRides().then(rides => {
+    populateRideDetails(rides.filter(ride => {
+      if (!selectedDuration) return true;
+      const durationRange = ride.duration >= 4 ? "4+" : `${ride.duration}-${ride.duration + 1}`;
+      return durationRange === selectedDuration;
+    }));
+    createStatisticsChart(rides.filter(ride => {
+      if (!selectedDuration) return true;
+      const durationRange = ride.duration >= 4 ? "4+" : `${ride.duration}-${ride.duration + 1}`;
+      return durationRange === selectedDuration;
+    }));
+  });
+});
 
   // execution au chargement de la page
 window.addEventListener('load', () => {
