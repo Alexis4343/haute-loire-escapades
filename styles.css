@@ -164,3 +164,11 @@ body {
   
   }
   
+
+  .logo {
+    flex-grow: 1; /* Allow logo to take up remaining space */
+  }
+  
+  .logo img {
+    height: 150px; /* Adjust logo size as needed */
+  }
