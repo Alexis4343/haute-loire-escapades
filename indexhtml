@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haute-Loire Escapades</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Haute-Loire Escapades</h1>
+        <p>Explorez les routes sinueuses de Haute-Loire</p>
+    </header>
+        <section id="map-container">
+            <div id="map"></div>
+        </section>
+        <section id="ride-details">
+                <h2>Les balades</h2>
+            <p>Infos</p>
+            
+        </section>
+        <section id="filters">
+            <h3>Filtres</h3>
+                <label for="duration-filter">Durée:</label>
+                <select id="duration-filter">
+                    <option value="">Toutes les durées</option>
+                    <option value="1-2">1 à 2 heures</option>
+                    <option value="2-3">2 à 3 heures</option>
+                    <option value="3-4">3 à 4 heures</option>
+                    <option value="4+">4 heures et plus</option>
+                </select>
+        </section>
+        <section id="diagram-container">
+            <h3>Statistiques</h3>
+            <canvas id="myChart"></canvas>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Haute-Loire Escapades</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
