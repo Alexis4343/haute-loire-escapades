@@ -12,6 +12,28 @@ function fetchRides() {
         duration: 1,
         image: "images/ride1.jpg"
       },
+      {
+        name: "La Loire sauvage",
+        description: "Découvrez la beauté sauvage de la Loire",
+        type: "balade au bord de l'eau",
+        difficulty: "Moyen",
+        length: 180,
+        start_latitude: 45.05,
+        start_longitude: 3.88,
+        duration: 3,
+        image: "images/ride1.jpg"
+      },
+      {
+        name: "Autour du mezenc",
+        description: "Baladez vous entre haute loire et lozère",
+        type: "Montagne",
+        difficulty: "Moyen",
+        length: 120,
+        start_latitude: 45.036418,
+        start_longitude: 4.058532,
+        duration: 2,
+        image: "images/ride1.jpg"
+      },
     ]);
   }
 
