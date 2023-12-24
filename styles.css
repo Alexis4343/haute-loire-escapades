@@ -34,3 +34,86 @@ body {
     padding: 20px;
     margin-bottom: 20px;
   }
+
+  /*Carte*/
+#map-container {
+    width: 50%;
+    height: auto;
+  }
+  
+  #map {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /*Infos balades*/
+  #ride-details {
+    width: 40%;
+  }
+  
+  /*Filtres*/
+  #filters {
+    width: 25%;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  /*card balades*/
+.ride-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ride-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .ride-card img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .ride-card .info-container {
+    text-align: left;
+  }
+  
+  .ride-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  .ride-card p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+  
+  .ride-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .ride-card li {
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+  }
